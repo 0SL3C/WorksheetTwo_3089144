@@ -24,7 +24,8 @@ public class ConversionsTest {
         // TestCases
         // It is a 2d array, so it will have {$euro, $expectedResult}
         double[][] testCases = {
-            {50, 52.27},
+            {50, 52.25}, // Positive values
+            {-30, -31.35} // Negative values
         };
 
         // For loop to iterate over testCases
