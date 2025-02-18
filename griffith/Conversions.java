@@ -3,7 +3,8 @@ package griffith;
 public class Conversions {
 
     public double euroToDollar(double euro){
-        return 0;
+        double dollar = 1.045;
+        return euro * dollar;
     }
 
     public double dollarToEuro(double dollar){
