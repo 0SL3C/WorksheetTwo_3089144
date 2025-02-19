@@ -14,7 +14,6 @@ public class Conversions {
     }
 
     public int stringToInteger (String val){
-
         // Use regex formatting to delete all characters before conversion
         String replace = val.replaceAll("[^0-9]",""); 
 
@@ -23,7 +22,8 @@ public class Conversions {
     }
 
     public String integerToString (int val){
-        return null;
+        String str = String.valueOf(val);
+        return str;
     }
 
     public String switchCase(){

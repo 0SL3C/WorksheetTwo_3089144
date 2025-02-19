@@ -77,4 +77,25 @@ public class ConversionsTest {
             assertEquals(expectedResult, conv.stringToInteger(test));
         }
     }
+
+    @Test
+    void testIntegerToString(){
+        int[] testCases = {
+            999, // Normal value
+            Integer.MAX_VALUE,  // Boundary values of integer data type
+            Integer.MIN_VALUE
+        };
+
+        String[] expectedResults = {
+            "999",
+            "2147483647",
+            "-2147483648"
+        };
+
+        for(int i = 0; i < testCases.length; i++){
+            int test = testCases[i];
+            String expectedResult = expectedResults[i];
+            assertEquals(expectedResult,conv.integerToString(test));
+        }
+    }
 }
