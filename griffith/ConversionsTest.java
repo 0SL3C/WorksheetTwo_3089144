@@ -21,12 +21,12 @@ public class ConversionsTest {
     // Implementation of Euro To Dollar test
     @Test
     void testEuroToDollar() {
-
         // TestCases
         // It is a 2d array, so it will have {$euro, $expectedResult}
         double[][] testCases = {
             {50, 52.25}, // Positive values
             {-30, -31.35}, // Negative values
+            {0, 0} // zero 
         };
 
         // For loop to iterate over testCases
@@ -34,6 +34,24 @@ public class ConversionsTest {
             double euro = testCases[i][0]; // euro has index 0 on testCases array
             double expectedResult = testCases[i][1]; //  euro has index 1 on testCases array
             assertEquals(df.format(expectedResult), df.format(conv.euroToDollar(euro)));
+        }
+    }
+
+    @Test
+    void testDollarToEuro() {
+        // TestCases
+        // It is a 2d array, so it will have {$dollar, $expectedResult}
+        double[][] testCases = {
+            {50, 47.85}, // Positive values
+            {-30, -28.71}, // Negative values
+            {0, 0} // zero 
+        };
+
+        // For loop to iterate over testCases
+        for(int i = 0; i < testCases.length; i++){
+            double dollar = testCases[i][0]; // dollar has index 0 on testCases array
+            double expectedResult = testCases[i][1]; //  dollar has index 1 on testCases array
+            assertEquals(df.format(expectedResult), df.format(conv.dollarToEuro(dollar)));
         }
     }
 }

@@ -1,13 +1,16 @@
 package griffith;
 
 public class Conversions {
+    double dollarRate = 1.045;
     public double euroToDollar(double euro){
-        double dollar = 1.045;
+        double dollar = dollarRate;
         return euro * dollar;
     }
 
     public double dollarToEuro(double dollar){
-        return 0;
+        // Here is used the dollarRate divided by 1 to get the price of $ in €
+        double euro = 1/dollarRate;
+        return euro * dollar;
     }
 
     public int stringToInteger (String val){
