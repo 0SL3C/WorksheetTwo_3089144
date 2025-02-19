@@ -14,7 +14,11 @@ public class Conversions {
     }
 
     public int stringToInteger (String val){
-        int number = Integer.parseInt(val);
+
+        // Use regex formatting to delete all characters before conversion
+        String replace = val.replaceAll("[^0-9]",""); 
+
+        int number = Integer.parseInt(replace);
         return number;
     }
 
