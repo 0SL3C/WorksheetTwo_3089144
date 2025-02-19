@@ -37,6 +37,7 @@ public class ConversionsTest {
         }
     }
 
+    // Implementation of Dollar to Euro test
     @Test
     void testDollarToEuro() {
         // TestCases
@@ -44,7 +45,7 @@ public class ConversionsTest {
         double[][] testCases = {
             {50, 47.85}, // Positive values
             {-30, -28.71}, // Negative values
-            {0, 0} // zero 
+            {0, 0}, // zero
         };
 
         // For loop to iterate over testCases
@@ -52,6 +53,28 @@ public class ConversionsTest {
             double dollar = testCases[i][0]; // dollar has index 0 on testCases array
             double expectedResult = testCases[i][1]; //  dollar has index 1 on testCases array
             assertEquals(df.format(expectedResult), df.format(conv.dollarToEuro(dollar)));
+        }
+    }
+
+    // Implementation of String to Integer
+    @Test
+    void testStringToInteger(){
+        String[] testCases = {
+            "123", // Numbers
+            "Hello333", // Text & numbers
+            "£!$[394" // Symbols & numbers
+        };
+
+        int[] expectedResults = {
+            123,
+            333,
+            394
+        };
+
+        for(int i = 0; i < testCases.length; i++){
+            String test = testCases[i];
+            int expectedResult = expectedResults[i];
+            assertEquals(expectedResult, conv.stringToInteger(test));
         }
     }
 }

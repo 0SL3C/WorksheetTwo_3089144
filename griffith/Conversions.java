@@ -8,13 +8,14 @@ public class Conversions {
     }
 
     public double dollarToEuro(double dollar){
-        // Here is used the dollarRate divided by 1 to get the price of $ in €
+        // Here is used 1/dollarRate to get the price of dollar in euro. €1 = $1.045 so $1 = €1/$1.045
         double euro = 1/dollarRate;
         return euro * dollar;
     }
 
     public int stringToInteger (String val){
-        return 0;
+        int number = Integer.parseInt(val);
+        return number;
     }
 
     public String integerToString (int val){
