@@ -98,4 +98,18 @@ public class ConversionsTest {
             assertEquals(expectedResult,conv.integerToString(test));
         }
     }
+
+    @Test
+    void testSwitchCase(){
+        String[][] testCases = {
+            {"Hello", "hELLO"}
+        };
+
+    
+        for(int i = 0; i < testCases.length; i++){
+            String testCase = testCases[i][0];
+            String expectedResult = testCases[i][1];
+            assertEquals(expectedResult, testCase);
+        }
+    }
 }

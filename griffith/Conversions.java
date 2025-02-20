@@ -1,5 +1,7 @@
 package griffith;
 
+import java.util.Locale;
+
 public class Conversions {
     double dollarRate = 1.045;
     public double euroToDollar(double euro){
@@ -26,7 +28,8 @@ public class Conversions {
         return str;
     }
 
-    public String switchCase(){
-        return null;
+    public String switchCase(String val){
+        String replace = val.replaceAll("[A-Z]","a-z").replaceAll("[a-z]","[A-Z]");
+        return replace;
     }
 }
