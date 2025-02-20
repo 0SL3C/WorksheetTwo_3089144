@@ -29,7 +29,7 @@ public class Conversions {
     }
 
     public String switchCase(String val){
-        String replace = val.replaceAll("[A-Z]","a-z").replaceAll("[a-z]","[A-Z]");
+        String replace = val.replaceAll("[A-Z]","[a-z]").replaceAll("[a-z]","[A-Z]");
         return replace;
     }
 }

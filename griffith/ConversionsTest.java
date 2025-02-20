@@ -101,6 +101,7 @@ public class ConversionsTest {
 
     @Test
     void testSwitchCase(){
+        // 2d Array, index 0 is the testCase and index 1 is expectedResult
         String[][] testCases = {
             {"Hello", "hELLO"}
         };
@@ -109,7 +110,7 @@ public class ConversionsTest {
         for(int i = 0; i < testCases.length; i++){
             String testCase = testCases[i][0];
             String expectedResult = testCases[i][1];
-            assertEquals(expectedResult, testCase);
+            assertEquals(expectedResult, conv.switchCase(testCase));
         }
     }
 }
