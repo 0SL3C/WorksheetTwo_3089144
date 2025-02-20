@@ -29,7 +29,16 @@ public class Conversions {
     }
 
     public String switchCase(String val){
-        String replace = val.replaceAll("[A-Z]","[a-z]").replaceAll("[a-z]","[A-Z]");
-        return replace;
+        char[] letters = val.toCharArray();
+        char[] result = new char[letters.length];
+
+        for(int i = 0; i < letters.length; i++){
+            if(Character.isUpperCase(letters[i])){
+                result[i] = Character.toLowerCase(letters[i]);
+            }else{
+                result[i] = Character.toUpperCase(letters[i]);
+            }
+        }
+        return result.toString();
     }
 }
