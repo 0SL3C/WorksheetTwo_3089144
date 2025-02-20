@@ -103,7 +103,10 @@ public class ConversionsTest {
     void testSwitchCase(){
         // 2d Array, index 0 is the testCase and index 1 is expectedResult
         String[][] testCases = {
-            {"Hello", "hELLO"}
+            {"Hello", "hELLO"}, // Normal values
+            {null, null}, // null value
+            {"", ""}, // empty string
+            {"123", "123"}, // numeric
         };
 
     

@@ -1,7 +1,5 @@
 package griffith;
 
-import java.util.Locale;
-
 public class Conversions {
     double dollarRate = 1.045;
     public double euroToDollar(double euro){
@@ -29,6 +27,9 @@ public class Conversions {
     }
 
     public String switchCase(String val){
+        if(val == null){
+            return null;
+        }
         char[] letters = val.toCharArray();
         char[] result = new char[letters.length];
 
@@ -39,6 +40,6 @@ public class Conversions {
                 result[i] = Character.toUpperCase(letters[i]);
             }
         }
-        return result.toString();
+        return new String(result);
     }
 }
